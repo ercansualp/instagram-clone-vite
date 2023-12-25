@@ -35,9 +35,7 @@ RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
  
 # Edit php.ini to enable the PDO extension
 
-RUN echo "extension=pdo.so" >> "$PHP_INI_DIR/php.ini" \
-
-    && echo "extension=pdo_mysql.so" >> "$PHP_INI_DIR/php.ini"
+RUN echo "extension=pdo.so" >> "$PHP_INI_DIR/php.ini" && echo "extension=pdo_mysql.so" >> "$PHP_INI_DIR/php.ini"
  
 # Run apache2 when the container launches
 
