@@ -2,12 +2,8 @@
 FROM mysql:latest
  
 # Set the root password and create a database
-ENV MYSQL_ROOT_PASSWORD=root
+ENV MYSQL_ROOT_PASSWORD=123456
 ENV MYSQL_DATABASE=instagram-clone
- 
-# Optionally, create a non-root user and grant privileges
-ENV MYSQL_USER=root
-ENV MYSQL_PASSWORD=123456
  
 # Optionally, expose the MySQL port
 EXPOSE 3306
