@@ -6,20 +6,12 @@ services:
       context: ./server/php
     ports:
       - "8080:80"
-    depends_on:
-      - mysql
       
   nodejs:
     build:
       context: ./server/nodejs
     ports:
       - "5000:5000"
- 
-  mysql:
-    build:
-      context: ./mysql
-    ports:
-      - "3306:3306"
  
   frontend:
     build:
