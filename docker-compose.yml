@@ -23,6 +23,8 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: instagram-clone
+      MYSQL_USER: root
+      MYSQL_PASSWORD: 123456
  
   frontend:
     build:
