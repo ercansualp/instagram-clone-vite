@@ -27,6 +27,7 @@ EXPOSE 80
 ENV APACHE_DOCUMENT_ROOT /var/www/html/api
  
 # Update the default Apache site with the config we created
+
 ADD apache-config.conf /etc/apache2/sites-enabled/000-default.conf
  
 # Rename php.ini-production to php.ini
@@ -35,7 +36,9 @@ RUN mv "$PHP_INI_DIR/php.ini-production" "$PHP_INI_DIR/php.ini"
  
 # Edit php.ini to enable the PDO extension
 
-RUN echo "extension=pdo.so" >> "$PHP_INI_DIR/php.ini" && echo "extension=pdo_mysql.so" >> "$PHP_INI_DIR/php.ini"
+RUN echo "extension=pdo.so" >> "$PHP_INI_DIR/php.ini" \
+
+    && echo "extension=pdo_mysql.so" >> "$PHP_INI_DIR/php.ini"
  
 # Run apache2 when the container launches
 
