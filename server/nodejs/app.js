@@ -13,7 +13,7 @@ const server = http.createServer(app);
 
 const io = new Server(server, {
     cors: {
-        origin: "http://frontend:" + CLIENT_PORT,
+        origin: "http://0.0.0.0:" + CLIENT_PORT,
         methods: ["GET", "POST"]
     }
 });
