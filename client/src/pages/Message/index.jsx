@@ -20,7 +20,7 @@ import PlayVıdeoIcon from "../../assets/img/play_24dp.png";
 import PlayButton from "../../assets/img/playButton.png";
 import MessageFile from "./components/MessageFile.jsx";
 
-const socket = io.connect("http://localhost:5000");
+const socket = io.connect("http://nodejs:5000");
 
 export default function Message() {
     const navigate = useNavigate();
