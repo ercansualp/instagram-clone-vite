@@ -19,6 +19,11 @@ switch($actionType) {
         print_r($result);
         break;
 
+    case "AddPost2":
+        $result = PostCRUD::AddPost2();
+        print_r($result);
+        break;
+
     case "GetPost":
         $result = PostCRUD::GetPost($_POST["post_id"]);
         print_r($result);
