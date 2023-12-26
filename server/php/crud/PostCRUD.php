@@ -35,7 +35,7 @@ class PostCRUD {
         self::initialize();
 
         $addPostQuery = "
-                INSERT INTO Posts (uid, description, url, post_key)
+                INSERT INTO posts (uid, description, url, post_key)
                 VALUES (?, ?, ?, ?)
             ";
         $addPostQueryParams = array(
@@ -44,6 +44,8 @@ class PostCRUD {
             $post["url"],
             $post["post_key"]
         );
+        print_r($addPostQueryParams);
+        exit;
 
         $result = self::$conn->Fetch($addPostQuery, $addPostQueryParams);
 
