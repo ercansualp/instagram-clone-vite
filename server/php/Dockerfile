@@ -16,7 +16,7 @@ RUN docker-php-ext-install pdo pdo_mysql
  
 # Copy the current directory contents into the container at /var/www/html
 
-COPY . /var/www/html/api/
+COPY . /var/www/html/server/php
  
 # Make port 80 available to the world outside this container
 
@@ -24,7 +24,7 @@ EXPOSE 80
  
 # Define environment variable
 
-ENV APACHE_DOCUMENT_ROOT /var/www/html/api
+ENV APACHE_DOCUMENT_ROOT /var/www/html/server/php
  
 # Update the default Apache site with the config we created
 
