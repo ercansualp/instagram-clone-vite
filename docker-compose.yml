@@ -1,7 +1,7 @@
 version: '3.8'
  
 services:
-  api:
+  php:
     build:
       context: ./server/php
     ports:
@@ -13,11 +13,11 @@ services:
     ports:
       - "5000:5000"
  
-  frontend:
+  client:
     build:
       context: ./client
     ports:
       - "5173:5173"  # Adjust the port as needed
     depends_on:
-      - api
+      - php
       - nodejs
