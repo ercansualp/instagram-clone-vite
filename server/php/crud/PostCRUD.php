@@ -50,25 +50,6 @@ class PostCRUD {
         return $result;
     }
 
-    static function AddPost2() {
-        self::initialize();
-
-        $addPostQuery = "
-                INSERT INTO posts (uid, description, url, post_key)
-                VALUES (?, ?, ?, ?)
-            ";
-        $addPostQueryParams = array(
-            "deneme1",
-            "deneme2",
-            "deneme3",
-            "deneme4"
-        );
-
-        $result = self::$conn->Fetch($addPostQuery, $addPostQueryParams);
-
-        return $result;
-    }
-
     static function GetCommentLikes($comment_id) {
         self::initialize();
 
@@ -191,7 +172,7 @@ class PostCRUD {
         self::initialize();
 
         $getPostCommentQuery = "
-                SELECT * FROM Post_Comments
+                SELECT * FROM post_Comments
                 WHERE comment_id = ?
             ";
         $getPostCommentQueryParams = array($comment_id);

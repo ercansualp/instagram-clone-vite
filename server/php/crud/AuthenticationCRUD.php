@@ -19,7 +19,7 @@ class AuthenticationCRUD
         self::initialize();
 
         $addUserQuery = "
-                INSERT INTO Users (uid, email, username, password, name)
+                INSERT INTO users (uid, email, username, password, name)
                 VALUES (?, ?, ?, ?, ?)
             ";
         $addUserQueryParams = array(
@@ -63,7 +63,7 @@ class AuthenticationCRUD
         self::initialize();
 
         $updateUserQuery = "
-                UPDATE Users SET email = ?, username = ?, password = ?, name = ?, biography = ?, gender = ?, birthdate = ?, picture = ? WHERE uid = ?
+                UPDATE users SET email = ?, username = ?, password = ?, name = ?, biography = ?, gender = ?, birthdate = ?, picture = ? WHERE uid = ?
             ";
         $updateUserQueryParams = array(
             $user["email"],
