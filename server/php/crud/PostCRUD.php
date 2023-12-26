@@ -1,7 +1,8 @@
 <?php
-require_once "../manager/DbManager.php";
 header("Access-Control-Allow-Origin: *");
+header("Access-Control-Allow-Methods: *");
 header("Access-Control-Allow-Headers: *");
+require_once "../manager/DbManager.php";
 
 class PostCRUD {
     private static $conn; // Bu sınıfın içindeki tüm static fonksiyonlardan erişilebilecek bir özellik.
