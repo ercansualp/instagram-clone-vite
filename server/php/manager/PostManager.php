@@ -15,6 +15,8 @@ switch($actionType) {
         break;
 
     case "AddPost":
+		print_r($_POST);
+		exit;
         $result = PostCRUD::AddPost($_POST["post"]);
         print_r($result);
         break;
