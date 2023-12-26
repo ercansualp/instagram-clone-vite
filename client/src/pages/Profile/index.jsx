@@ -30,7 +30,7 @@ export default function Profile() {
     /*
     const GetUserPosts = async () => {
         const {data} = await axios
-            .post("http://localhost/instagram-clone/manager/PostManager.php", {
+            .post("http://13.50.130.221:8080/manager/PostManager.php", {
                 actionType: "GetUserPosts",
                 uid: user && user.uid
             });

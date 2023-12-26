@@ -111,7 +111,7 @@ export default function SharePostDialog(props) {
             const formData = new FormData();
             const imagefile = file;
             formData.append("image", imagefile);
-            const {data} = await axios.post('http://localhost/instagram-clone-revised/upload_post_image.php', formData, {
+            const {data} = await axios.post('http://13.50.130.221:8080/upload_post_image.php', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }

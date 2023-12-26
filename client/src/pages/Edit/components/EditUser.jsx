@@ -330,7 +330,7 @@ export default function EditUser() {
         if (imagefile) {
             const formData = new FormData();
             formData.append("image", imagefile);
-            const {data} = await axios.post('http://localhost/instagram-clone-revised/change_user_profile.php', formData, {
+            const {data} = await axios.post('http://13.50.130.221:8080/change_user_profile.php', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }

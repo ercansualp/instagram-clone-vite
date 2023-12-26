@@ -176,7 +176,7 @@ export default function Message() {
                 let formData = new FormData();
                 formData.append("image", filesForPost[i]);
                 try {
-                    const {data} = await axios.post('http://localhost/instagram-clone-revised/upload-message-file.php', formData, {
+                    const {data} = await axios.post('http://13.50.130.221:8080/upload-message-file.php', formData, {
                         headers: {
                             'Content-Type': 'multipart/form-data'
                         }

@@ -71,7 +71,7 @@ export default function EditUserProfilePicture({open, setOpen}) {
         const formData = new FormData();
         const imagefile = e.target.files[0];
         formData.append("image", imagefile);
-        const {data} = await axios.post('http://localhost/instagram/manager/AuthenticationManager.php', formData, {
+        const {data} = await axios.post('http://13.50.130.221:8080/manager/AuthenticationManager.php', formData, {
             actionType: "update_profile",
             uid: currentUser.uid,
             picture: formData
@@ -86,7 +86,7 @@ export default function EditUserProfilePicture({open, setOpen}) {
         if (imagefile) {
             const formData = new FormData();
             formData.append("image", imagefile);
-            const {data} = await axios.post('http://localhost/instagram-clone-revised/change_user_profile.php', formData, {
+            const {data} = await axios.post('http://13.50.130.221:8080/change_user_profile.php', formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }
